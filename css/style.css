@@ -14,3 +14,42 @@ span {
 p {
     text-align: center;
 }
+
+#header {
+    height: 80px;
+    background-color: #b3a92a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sidebar {
+    height: 400px;
+    width: 120px;
+    background-color: #2fb32a;
+}
+
+#content {
+    width: 680px;
+    background-color: #5ed3e2;
+}
+
+#footer {
+    height: 150px;
+    background-color: #0b0816;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.flex-row {
+    display: flex;
+}
+
+#menu
+{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+}
