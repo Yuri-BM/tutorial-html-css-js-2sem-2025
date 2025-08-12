@@ -23,6 +23,11 @@ p {
     align-items: center;
 }
 
+#header img{
+    width: 60px;
+    height: 60px;
+}
+
 #sidebar {
     height: 400px;
     width: 120px;
