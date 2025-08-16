@@ -1,0 +1,81 @@
+#header{
+    height: 80px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo{
+    height: 60px;
+    width: 60px;
+    background-color: red;
+}
+
+#menu{
+    height: 60px;
+    width: 240px;
+    background-color: violet;
+}
+
+#article{
+    height: 250px;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.imagem{
+    height: 150px;
+    width: 100px;
+    background-color: green;
+}
+
+#titulo{
+    height: 50px;
+    width: 240px;
+    background-color: aquamarine;
+}
+
+#subtitulo{
+    height: 40px;
+    width: 240px;
+    background-color: aquamarine;
+}
+
+#espaco{
+    height: 20px;
+    width: 240px;
+    background-color: aqua;
+}
+
+#section{
+    height: 250px;
+    background-color: blue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#footer{
+    height: 250px;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#informacoes{
+    height: 150px;
+    width: 300px;
+    background-color: aqua;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#posicao-informacoes{
+    height: 75px;
+    width: 150px;
+    background-color: aquamarine;
+}
