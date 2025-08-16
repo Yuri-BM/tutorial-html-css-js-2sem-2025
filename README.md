@@ -14,7 +14,7 @@
 - Externo, Interno e In-line
 - Sintaxe do código CSS
 - ID e Classes
-- Flexbox (display: flex e outros elementos) - https://flejxboxfroggy.com/
+- Flexbox (display: flex e outros elementos) - https://flexboxfroggy.com/
 
 
 ## Comandos Git
