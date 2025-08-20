@@ -15,6 +15,11 @@
 - Sintaxe do código CSS
 - ID e Classes
 - Flexbox (display: flex e outros elementos) - https://flexboxfroggy.com/
+- Seletores
+  - filho de
+  - , seletor e
+- margin e padding
+- medidas relativas (% e vh e vw)
 
 
 ## Comandos Git
