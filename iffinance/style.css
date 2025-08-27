@@ -25,6 +25,31 @@ header img {
     align-items: center;
 }
 
+header nav {
+    margin: 0 0 0 auto;
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px
+}
+
+header nav ul li{
+    list-style-type: none;
+}
+
+
+header nav ul li a {
+    padding: 32px 20px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+header nav ul li a:hover, .active{
+    border-bottom: 2px solid #e9962aff;
+    color: #e9962aff;
+}
+
 #logo{
     height: 60px;
     width: 60px;
@@ -60,4 +85,50 @@ header img {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.flex-row{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+    background-color: white;
+    height: 230px;
+    width: 480px;
+    margin: 10px 5px 5px 5px;
+}
+
+.secao-superior{
+    display: flex;
+    justify-content: space-around;
+}
+
+.preco{
+    display: flex;
+    justify-content: center;
+    color: green;
+    font-size: xx-large;
+}
+
+.secao-inferior{
+    display: flex;
+    justify-content: space-around;
+    color: black;
+}
+
+.ticker{
+    color: black;
+}
+
+.bolsa{
+    color: black;
+}
+
+.no-ativos{
+    color: black;
+}
+
+.posicao{
+    color: black;
 }
