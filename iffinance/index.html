@@ -3,6 +3,23 @@
     <head>
         <title>IFFinance</title>
         <link rel="stylesheet" href="style.css" />
+        <script>
+            /*
+            Exemplo de
+            Bloco de Comentários
+            */
+            //alert("Olá Mundo Javascript!")
+
+            let nome = "Yúri" // pode ser alterado
+            const rua = "Avenida Rio G. do Sul" // cria uma constante
+            var idade = 38 // pode ser alterada
+            
+            nome = "Renan"
+            var idade = 40
+            
+
+            console.log(idade)
+        </script>
     </head>
 
     <body>
@@ -17,6 +34,7 @@
                         <li><a href="index.html" class="active">Home</a></li>
                         <li><a href="quem-somos.html">Quem Somos</a></li>
                         <li><a href="contatos.html">Contatos</a></li>
+                        <li><button onclick="openModal()">Adicionar</button></li>
                     </ul>
                 </nav>
             </div>
@@ -24,137 +42,139 @@
 
         <div id="central">
             <main id="main">
-                <div class="flex-row">
-                    <div class="card">
-                        <div class="secao-superior">
-                            <div class="ticker">
-                                <p><b>APPL</b></p>
+                <div id="cards">
+                    <div class="flex-row">
+                        <div class="card">
+                            <div class="secao-superior">
+                                <div class="ticker">
+                                    <p><b>APPL</b></p>
+                                </div>
+                                <div class="bolsa">
+                                    <p>Nasdaq</p>
+                                </div>
                             </div>
-                            <div class="bolsa">
-                                <p>Nasdaq</p>
+                            <div class="preco">
+                                <h3>US$ 235.00</h3>   
+                            </div>
+                            <div class="secao-inferior">
+                                <div class="no-ativos">
+                                    <p>Número de ativos: 10</p>
+                                </div>
+                                <div class="posicao">
+                                    <p>US$ 2350.00</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="preco">
-                            <h3>US$ 235.00</h3>   
-                        </div>
-                        <div class="secao-inferior">
-                            <div class="no-ativos">
-                                <p>Número de ativos: 10</p>
+
+                        <div class="card">
+                            <div class="secao-superior">
+                                <div class="ticker">
+                                    <p><b>GOOL</b></p>
+                                </div>
+                                <div class="bolsa">
+                                    <p>Nasdaq</p>
+                                </div>
                             </div>
-                            <div class="posicao">
-                                <p>US$ 2350.00</p>
+                            <div class="preco">
+                                <h3 style="color: red;">US$ 35.00</h3>   
+                            </div>
+                            <div class="secao-inferior">
+                                <div class="no-ativos">
+                                    <p>Número de ativos: 10</p>
+                                </div>
+                                <div class="posicao">
+                                    <p>US$ 350.00</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="secao-superior">
+                                <div class="ticker">
+                                    <p><b>MSFT</b></p>
+                                </div>
+                                <div class="bolsa">
+                                    <p>Nasdaq</p>
+                                </div>
+                            </div>
+                            <div class="preco">
+                                <h3 style="color: black;">US$ 100.00</h3>   
+                            </div>
+                            <div class="secao-inferior">
+                                <div class="no-ativos">
+                                    <p>Número de ativos: 10</p>
+                                </div>
+                                <div class="posicao">
+                                    <p>US$ 1000.00</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="secao-superior">
-                            <div class="ticker">
-                                <p><b>GOOL</b></p>
+                    <div class="flex-row">
+                        <div class="card">
+                            <div class="secao-superior">
+                                <div class="ticker">
+                                    <p><b>APPL</b></p>
+                                </div>
+                                <div class="bolsa">
+                                    <p>Nasdaq</p>
+                                </div>
                             </div>
-                            <div class="bolsa">
-                                <p>Nasdaq</p>
+                            <div class="preco">
+                                <h3>US$ 235.00</h3>   
+                            </div>
+                            <div class="secao-inferior">
+                                <div class="no-ativos">
+                                    <p>Número de ativos: 10</p>
+                                </div>
+                                <div class="posicao">
+                                    <p>US$ 2350.00</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="preco">
-                            <h3 style="color: red;">US$ 35.00</h3>   
-                        </div>
-                        <div class="secao-inferior">
-                            <div class="no-ativos">
-                                <p>Número de ativos: 10</p>
-                            </div>
-                            <div class="posicao">
-                                <p>US$ 350.00</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="card">
-                        <div class="secao-superior">
-                            <div class="ticker">
-                                <p><b>MSFT</b></p>
+                        <div class="card">
+                            <div class="secao-superior">
+                                <div class="ticker">
+                                    <p><b>GOOL</b></p>
+                                </div>
+                                <div class="bolsa">
+                                    <p>Nasdaq</p>
+                                </div>
                             </div>
-                            <div class="bolsa">
-                                <p>Nasdaq</p>
+                            <div class="preco">
+                                <h3 style="color: red;">US$ 35.00</h3>   
+                            </div>
+                            <div class="secao-inferior">
+                                <div class="no-ativos">
+                                    <p>Número de ativos: 10</p>
+                                </div>
+                                <div class="posicao">
+                                    <p>US$ 350.00</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="preco">
-                            <h3 style="color: black;">US$ 100.00</h3>   
-                        </div>
-                        <div class="secao-inferior">
-                            <div class="no-ativos">
-                                <p>Número de ativos: 10</p>
-                            </div>
-                            <div class="posicao">
-                                <p>US$ 1000.00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="flex-row">
-                    <div class="card">
-                        <div class="secao-superior">
-                            <div class="ticker">
-                                <p><b>APPL</b></p>
+                        <div class="card">
+                            <div class="secao-superior">
+                                <div class="ticker">
+                                    <p><b>MSFT</b></p>
+                                </div>
+                                <div class="bolsa">
+                                    <p>Nasdaq</p>
+                                </div>
                             </div>
-                            <div class="bolsa">
-                                <p>Nasdaq</p>
+                            <div class="preco">
+                                <h3 style="color: black;">US$ 100.00</h3>   
                             </div>
-                        </div>
-                        <div class="preco">
-                            <h3>US$ 235.00</h3>   
-                        </div>
-                        <div class="secao-inferior">
-                            <div class="no-ativos">
-                                <p>Número de ativos: 10</p>
-                            </div>
-                            <div class="posicao">
-                                <p>US$ 2350.00</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="secao-superior">
-                            <div class="ticker">
-                                <p><b>GOOL</b></p>
-                            </div>
-                            <div class="bolsa">
-                                <p>Nasdaq</p>
-                            </div>
-                        </div>
-                        <div class="preco">
-                            <h3 style="color: red;">US$ 35.00</h3>   
-                        </div>
-                        <div class="secao-inferior">
-                            <div class="no-ativos">
-                                <p>Número de ativos: 10</p>
-                            </div>
-                            <div class="posicao">
-                                <p>US$ 350.00</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="secao-superior">
-                            <div class="ticker">
-                                <p><b>MSFT</b></p>
-                            </div>
-                            <div class="bolsa">
-                                <p>Nasdaq</p>
-                            </div>
-                        </div>
-                        <div class="preco">
-                            <h3 style="color: black;">US$ 100.00</h3>   
-                        </div>
-                        <div class="secao-inferior">
-                            <div class="no-ativos">
-                                <p>Número de ativos: 10</p>
-                            </div>
-                            <div class="posicao">
-                                <p>US$ 1000.00</p>
+                            <div class="secao-inferior">
+                                <div class="no-ativos">
+                                    <p>Número de ativos: 10</p>
+                                </div>
+                                <div class="posicao">
+                                    <p>US$ 1000.00</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -167,5 +187,27 @@
                 <p style="color: white">Yúri Barbosa</p>
             </div>
         </footer>
+
+        <div class="modal">
+            <main>
+                <h1>Cadastrar</h1>
+                <form onsubmit="addTicker(event)">
+                    <label for="ticker">Ticker:</label>
+                    <input type="text" id="ticker" name="ticker">
+                    <label for="bolsa">Bolsa:</label>
+                    <select id="bolsa" name="bolsa">
+                        <option value="Nasdaq">Nasdaq</option>
+                        <option value="NYSE">NYSE</option>
+                    </select>
+                    <label for="valor">Valor:</label>
+                    <input type="text" id="valor" name="valor">
+                    <label for="ativos">Ativos:</label>
+                    <input type="text" id="ativos" name="ativos">
+                    <input type="submit" value="Cadastrar">
+                    <button type="button" onclick="closeModal()">Fechar</button>
+                </form>
+            </main>
+        </div>
     </body>
+<script src="js/main.js"> </script>
 </html>

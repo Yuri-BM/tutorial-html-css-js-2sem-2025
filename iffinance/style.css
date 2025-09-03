@@ -38,6 +38,15 @@ header nav ul li{
     list-style-type: none;
 }
 
+header nav ul li button{
+    background: #e9962aff;
+    color: #FFF;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin: 0 0 0 15px;
+    cursor: pointer;
+}
+
 
 header nav ul li a {
     padding: 32px 20px;
@@ -95,8 +104,9 @@ header nav ul li a:hover, .active{
 .card{
     background-color: white;
     height: 230px;
-    width: 480px;
+    width: 360px;
     margin: 10px 5px 5px 5px;
+    border-radius: 10px;
 }
 
 .secao-superior{
@@ -131,4 +141,63 @@ header nav ul li a:hover, .active{
 
 .posicao{
     color: black;
+}
+
+.modal{
+    background: #14141489;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal main{
+    background: #FFF;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+
+.modal main h1{
+    color: #000;
+    margin: 0;
+}
+
+.modal main label{
+    color: #000000;
+    margin: 10px 0 0 0;
+}
+
+.modal main form{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 0 0;
+}
+
+.modal main form input[type="text"], .modal main form select{
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px, solid, #000;
+}
+
+.modal main form input[type="submit"], .modal main button{
+    background: #e9962aff;
+    color: #FFF;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin: 15px 0 0 15px;
+    cursor: pointer;
+}
+
+#cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
