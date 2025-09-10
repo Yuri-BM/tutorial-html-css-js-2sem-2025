@@ -34,7 +34,7 @@
                         <li><a href="index.html" class="active">Home</a></li>
                         <li><a href="quem-somos.html">Quem Somos</a></li>
                         <li><a href="contatos.html">Contatos</a></li>
-                        <li><button onclick="openModal()">Adicionar</button></li>
+                        <li><button onclick="openModal('#add')">Adicionar</button></li>
                     </ul>
                 </nav>
             </div>
@@ -44,7 +44,7 @@
             <main id="main">
                 <div id="cards">
                     <div class="flex-row">
-                        <div class="card">
+                        <div class="card" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
                             <div class="secao-superior">
                                 <div class="ticker">
                                     <p><b>APPL</b></p>
@@ -64,9 +64,13 @@
                                     <p>US$ 2350.00</p>
                                 </div>
                             </div>
+                            <div class="buttons">
+                                <button type="button" onclick="openEditCard(event)">Editar</button>
+                                <button type="button" onclick="deleteCard(event)">Excluir</button>
+                            </div>
                         </div>
 
-                        <div class="card">
+                        <div class="card" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
                             <div class="secao-superior">
                                 <div class="ticker">
                                     <p><b>GOOL</b></p>
@@ -76,7 +80,7 @@
                                 </div>
                             </div>
                             <div class="preco">
-                                <h3 style="color: red;">US$ 35.00</h3>   
+                                <h3 style="color: red">US$ 35.00</h3>   
                             </div>
                             <div class="secao-inferior">
                                 <div class="no-ativos">
@@ -86,9 +90,13 @@
                                     <p>US$ 350.00</p>
                                 </div>
                             </div>
+                            <div class="buttons">
+                                <button type="button" onclick="">Editar</button>
+                                <button type="button" onclick="deleteCard(event)">Excluir</button>
+                            </div>
                         </div>
 
-                        <div class="card">
+                        <div class="card" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
                             <div class="secao-superior">
                                 <div class="ticker">
                                     <p><b>MSFT</b></p>
@@ -107,12 +115,16 @@
                                 <div class="posicao">
                                     <p>US$ 1000.00</p>
                                 </div>
+                            </div>
+                            <div class="buttons">
+                                <button type="button" onclick="">Editar</button>
+                                <button type="button" onclick="deleteCard(event)">Excluir</button>
                             </div>
                         </div>
                     </div>
 
                     <div class="flex-row">
-                        <div class="card">
+                        <div class="card" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
                             <div class="secao-superior">
                                 <div class="ticker">
                                     <p><b>APPL</b></p>
@@ -132,9 +144,13 @@
                                     <p>US$ 2350.00</p>
                                 </div>
                             </div>
+                            <div class="buttons">
+                                <button type="button" onclick="">Editar</button>
+                                <button type="button" onclick="deleteCard(event)">Excluir</button>
+                            </div>
                         </div>
 
-                        <div class="card">
+                        <div class="card" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
                             <div class="secao-superior">
                                 <div class="ticker">
                                     <p><b>GOOL</b></p>
@@ -154,9 +170,13 @@
                                     <p>US$ 350.00</p>
                                 </div>
                             </div>
+                            <div class="buttons">
+                                <button type="button" onclick="">Editar</button>
+                                <button type="button" onclick="deleteCard(event)">Excluir</button>
+                            </div>
                         </div>
 
-                        <div class="card">
+                        <div class="card" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
                             <div class="secao-superior">
                                 <div class="ticker">
                                     <p><b>MSFT</b></p>
@@ -166,7 +186,7 @@
                                 </div>
                             </div>
                             <div class="preco">
-                                <h3 style="color: black;">US$ 100.00</h3>   
+                                <h3 style="color: black;">US$ <span>100.00</span></h3>   
                             </div>
                             <div class="secao-inferior">
                                 <div class="no-ativos">
@@ -175,6 +195,10 @@
                                 <div class="posicao">
                                     <p>US$ 1000.00</p>
                                 </div>
+                            </div>
+                            <div class="buttons">
+                                <button type="button" onclick="">Editar</button>
+                                <button type="button" onclick="deleteCard(event)">Excluir</button>
                             </div>
                         </div>
                     </div>
@@ -188,7 +212,7 @@
             </div>
         </footer>
 
-        <div class="modal">
+        <div class="modal" id="add">
             <main>
                 <h1>Cadastrar</h1>
                 <form onsubmit="addTicker(event)">
@@ -204,10 +228,33 @@
                     <label for="ativos">Ativos:</label>
                     <input type="text" id="ativos" name="ativos">
                     <input type="submit" value="Cadastrar">
-                    <button type="button" onclick="closeModal()">Fechar</button>
+                    <button type="button" onclick="closeModal('#add')">Fechar</button>
                 </form>
             </main>
         </div>
+
+        <div class="modal" id="edit">
+            <main>
+                <h1>Editar</h1>
+                <form onsubmit="editTicker(event)">
+                    <input type="hidden" id="idcard" name="idcard">
+                    <label for="ticker">Ticker:</label>
+                    <input type="text" id="editticker" name="ticker">
+                    <label for="bolsa">Bolsa:</label>
+                    <select id="editbolsa" name="bolsa">
+                        <option value="Nasdaq">Nasdaq</option>
+                        <option value="NYSE">NYSE</option>
+                    </select>
+                    <label for="valor">Valor:</label>
+                    <input type="text" id="editvalor" name="valor">
+                    <label for="ativos">Ativos:</label>
+                    <input type="text" id="editativos" name="ativos">
+                    <input type="submit" value="Editar">
+                    <button type="button" onclick="closeModal('#edit')">Fechar</button>
+                </form>
+            </main>
+        </div>
+
     </body>
 <script src="js/main.js"> </script>
 </html>

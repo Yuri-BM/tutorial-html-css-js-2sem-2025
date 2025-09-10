@@ -1,10 +1,10 @@
-function openModal(){
-    const modal = document.querySelector(".modal")
+function openModal(modalId){
+    const modal = document.querySelector(modalId)
     modal.style.display = "flex"
 }
 
-function closeModal(){
-    const modal = document.querySelector(".modal")
+function closeModal(modalId){
+    const modal = document.querySelector(modalId)
     modal.style.display = "none"
 }
 
@@ -19,7 +19,7 @@ function addTicker(event){
     const total = valor * ativos
 
     const card = `
-        <div class="card">
+        <div class="card" id="${ticker}" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
             <div class="secao-superior">
                 <div class="ticker">
                      <p><b>${ticker}</b></p>
@@ -29,7 +29,7 @@ function addTicker(event){
                  </div>
             </div>
             <div class="preco">
-                <h3>US$ ${valor}</h3>   
+                <h3>US$ <span>${valor}</span></h3>   
             </div>
             <div class="secao-inferior">
                  <div class="no-ativos">
@@ -39,6 +39,10 @@ function addTicker(event){
                     <p>US$ ${total}</p>
                 </div>
             </div>
+            <div class="buttons">
+                <button type="button" onclick="openEditCard(event)">Editar</button>
+                <button type="button" onclick="deleteCard(event)">Excluir</button>
+            </div>
          </div>
     `
     const cards = document.querySelector("#cards")
@@ -46,4 +50,59 @@ function addTicker(event){
     cards.innerHTML += card
 
     closeModal()
+
+    event.target.reset()
+}
+
+function editTicker(event){
+    event.preventDefault()
+    
+    const ticker = event.target.editticker.value
+    const bolsa = event.target.editbolsa.value
+    const valor = event.target.editvalor.value
+    const ativos = event.target.editativos.value
+
+    const total = valor * ativos
+
+    const cardStockEdit = document.getElementById(ticker)
+
+
+
+    closeModal()
+
+    event.target.reset()
+}
+
+function showButtons(event){
+    const cardStock = event.target
+    const buttons = cardStock.querySelector(".buttons")
+    buttons.style.display = "flex"
+}
+
+function hideButtons(event){
+    const cardStock = event.target
+    const buttons = cardStock.querySelector(".buttons")
+    buttons.style.display = "none"
+}
+
+function deleteCard(event){
+    const buttonDelete = event.target
+    const cardStock = buttonDelete.closest(".card")
+    cardStock.remove()
+}
+
+function openEditCard(event){
+
+    const buttonEdit = event.target
+    const cardStock = buttonEdit.closest(".card")
+
+    const ticker = cardStock.querySelector('.secao-superior .ticker').innerText
+    const inputEditTicker = document.getElementById('editticker')
+    inputEditTicker.value = ticker
+
+    const valor = cardStock.querySelector('.secao-superior .ticker').innerText
+    const inputEditValor = document.getElementById('editvalor')
+    inputEditValor.value = valor
+
+    openModal('#edit')
 }
