@@ -33,10 +33,10 @@ function addTicker(event){
             </div>
             <div class="secao-inferior">
                  <div class="no-ativos">
-                    <p>Número de ativos: ${ativos}</p>
+                    <p>Número de ativos: <span>${ativos}</span></p>
                  </div>
                  <div class="posicao">
-                    <p>US$ ${total}</p>
+                    <p>US$ <span>${total}</span></p>
                 </div>
             </div>
             <div class="buttons">
@@ -49,14 +49,15 @@ function addTicker(event){
 
     cards.innerHTML += card
 
-    closeModal()
-
     event.target.reset()
+
+    closeModal('#add')
 }
 
 function editTicker(event){
     event.preventDefault()
     
+    const idcard = event.target.idcard.value
     const ticker = event.target.editticker.value
     const bolsa = event.target.editbolsa.value
     const valor = event.target.editvalor.value
@@ -64,13 +65,26 @@ function editTicker(event){
 
     const total = valor * ativos
 
-    const cardStockEdit = document.getElementById(ticker)
+    const cardStockEdit = document.getElementById(idcard)
 
+    const h2Ticker = cardStockEdit.querySelector('.secao-superior .ticker')
+    h2Ticker.innerText = ticker
 
+    const h3Bolsa = cardStockEdit.querySelector('.secao-superior .bolsa')
+    h3Bolsa.innerText = bolsa
 
-    closeModal()
+    const spanValor = cardStockEdit.querySelector('div.preco h3 span')
+    spanValor.innerText = valor
+
+    const spanAtivos = cardStockEdit.querySelector('div.secao-inferior div.no-ativos p span')
+    spanAtivos.innerText = ativos
+
+    const spanTotal = cardStockEdit.querySelector('div.secao-inferior div.posicao p span')
+    spanTotal.innerText = total
 
     event.target.reset()
+
+    closeModal('#edit')
 }
 
 function showButtons(event){
@@ -100,9 +114,21 @@ function openEditCard(event){
     const inputEditTicker = document.getElementById('editticker')
     inputEditTicker.value = ticker
 
-    const valor = cardStock.querySelector('.secao-superior .ticker').innerText
+    const idCard = cardStock.getAttribute('id')
+    const inputIdCard = document.getElementById('idcard')
+    inputIdCard.value = idCard
+
+    const bolsa = cardStock.querySelector('.secao-superior .bolsa').innerText
+    const selectEditbolsa = document.getElementById('editbolsa')
+    selectEditbolsa.value = bolsa
+
+    const valor = cardStock.querySelector('.preco h3 span').innerText
     const inputEditValor = document.getElementById('editvalor')
     inputEditValor.value = valor
+
+    const ativos = cardStock.querySelector('.secao-inferior .no-ativos p span').innerText
+    const inputEditAtivos = document.getElementById('editativos')
+    inputEditAtivos.value = ativos
 
     openModal('#edit')
 }

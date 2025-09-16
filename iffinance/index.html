@@ -44,7 +44,7 @@
             <main id="main">
                 <div id="cards">
                     <div class="flex-row">
-                        <div class="card" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
+                        <div class="card" id="APPL" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
                             <div class="secao-superior">
                                 <div class="ticker">
                                     <p><b>APPL</b></p>
@@ -54,14 +54,14 @@
                                 </div>
                             </div>
                             <div class="preco">
-                                <h3>US$ 235.00</h3>   
+                                <h3>US$ <span>235.00</span></h3>   
                             </div>
                             <div class="secao-inferior">
                                 <div class="no-ativos">
-                                    <p>Número de ativos: 10</p>
+                                    <p>Número de ativos: <span>10</span></p>
                                 </div>
                                 <div class="posicao">
-                                    <p>US$ 2350.00</p>
+                                    <p>US$ <span>2350.00</span></p>
                                 </div>
                             </div>
                             <div class="buttons">
@@ -70,7 +70,7 @@
                             </div>
                         </div>
 
-                        <div class="card" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
+                        <div class="card" id="GOOL" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
                             <div class="secao-superior">
                                 <div class="ticker">
                                     <p><b>GOOL</b></p>
@@ -80,103 +80,23 @@
                                 </div>
                             </div>
                             <div class="preco">
-                                <h3 style="color: red">US$ 35.00</h3>   
+                                <h3 style="color: red">US$ <span>35.00</span></h3>   
                             </div>
                             <div class="secao-inferior">
                                 <div class="no-ativos">
-                                    <p>Número de ativos: 10</p>
+                                    <p>Número de ativos: <span>10</span></p>
                                 </div>
                                 <div class="posicao">
-                                    <p>US$ 350.00</p>
+                                    <p>US$ <span>350.00</span></p>
                                 </div>
                             </div>
                             <div class="buttons">
-                                <button type="button" onclick="">Editar</button>
+                                <button type="button" onclick="openEditCard(event)">Editar</button>
                                 <button type="button" onclick="deleteCard(event)">Excluir</button>
                             </div>
                         </div>
 
-                        <div class="card" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
-                            <div class="secao-superior">
-                                <div class="ticker">
-                                    <p><b>MSFT</b></p>
-                                </div>
-                                <div class="bolsa">
-                                    <p>Nasdaq</p>
-                                </div>
-                            </div>
-                            <div class="preco">
-                                <h3 style="color: black;">US$ 100.00</h3>   
-                            </div>
-                            <div class="secao-inferior">
-                                <div class="no-ativos">
-                                    <p>Número de ativos: 10</p>
-                                </div>
-                                <div class="posicao">
-                                    <p>US$ 1000.00</p>
-                                </div>
-                            </div>
-                            <div class="buttons">
-                                <button type="button" onclick="">Editar</button>
-                                <button type="button" onclick="deleteCard(event)">Excluir</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex-row">
-                        <div class="card" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
-                            <div class="secao-superior">
-                                <div class="ticker">
-                                    <p><b>APPL</b></p>
-                                </div>
-                                <div class="bolsa">
-                                    <p>Nasdaq</p>
-                                </div>
-                            </div>
-                            <div class="preco">
-                                <h3>US$ 235.00</h3>   
-                            </div>
-                            <div class="secao-inferior">
-                                <div class="no-ativos">
-                                    <p>Número de ativos: 10</p>
-                                </div>
-                                <div class="posicao">
-                                    <p>US$ 2350.00</p>
-                                </div>
-                            </div>
-                            <div class="buttons">
-                                <button type="button" onclick="">Editar</button>
-                                <button type="button" onclick="deleteCard(event)">Excluir</button>
-                            </div>
-                        </div>
-
-                        <div class="card" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
-                            <div class="secao-superior">
-                                <div class="ticker">
-                                    <p><b>GOOL</b></p>
-                                </div>
-                                <div class="bolsa">
-                                    <p>Nasdaq</p>
-                                </div>
-                            </div>
-                            <div class="preco">
-                                <h3 style="color: red;">US$ 35.00</h3>   
-                            </div>
-                            <div class="secao-inferior">
-                                <div class="no-ativos">
-                                    <p>Número de ativos: 10</p>
-                                </div>
-                                <div class="posicao">
-                                    <p>US$ 350.00</p>
-                                </div>
-                            </div>
-                            <div class="buttons">
-                                <button type="button" onclick="">Editar</button>
-                                <button type="button" onclick="deleteCard(event)">Excluir</button>
-                            </div>
-                        </div>
-
-                        <div class="card" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
+                        <div class="card" id="MSFT" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
                             <div class="secao-superior">
                                 <div class="ticker">
                                     <p><b>MSFT</b></p>
@@ -190,14 +110,14 @@
                             </div>
                             <div class="secao-inferior">
                                 <div class="no-ativos">
-                                    <p>Número de ativos: 10</p>
+                                    <p>Número de ativos: <span>10</span></p>
                                 </div>
                                 <div class="posicao">
-                                    <p>US$ 1000.00</p>
+                                    <p>US$ <span>1000.00</span></p>
                                 </div>
                             </div>
                             <div class="buttons">
-                                <button type="button" onclick="">Editar</button>
+                                <button type="button" onclick="openEditCard(event)">Editar</button>
                                 <button type="button" onclick="deleteCard(event)">Excluir</button>
                             </div>
                         </div>
