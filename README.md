@@ -5,10 +5,17 @@
 - Doctype html 5
 - Estrutura básica do HTML
     - html, head, title, body
-- style
+- Tag Style
 - Tags de Texto: h1...h6, p
 - Destaque do Texto: b, i, span
 - div (id e class)
+- Tags Semânticas (header, footer, main, section, nav, aside)
+- Imagem (img src alt)
+- Form (input [text, hidden, password, checkbox, radio], select, textarea)
+- Table (tr, td, th)
+ - colspan
+ - rowspan
+- Script (adicionar código JavaScript)
 
 ## CSS
 - Externo, Interno e In-line
@@ -20,6 +27,17 @@
   - , seletor e
 - margin e padding
 - medidas relativas (% e vh e vw)
+- tipos de cores
+- font-family
+- position
+- border
+- border-collapse
+
+## JS
+- variáveis let, const e var
+- criação de funções
+- querySelector, getElementById, closest
+- event: event.target, event.preventDefault()
 
 
 ## Comandos Git

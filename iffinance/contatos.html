@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IFFinance - Contatos</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <header id="header">
+            <div id="header-central">
+                <div id="logo">
+                    <img src="img/logo.svg">
+                </div>
+                <h1><span style="color: #e9962aff;">IF</span>Finance</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="quem-somos.html">Quem Somos</a></li>
+                        <li><a href="contatos.html" class="active">Contatos</a></li>
+                        <li><button onclick="openModal('#add')">Adicionar</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="central">
+            <main id="main">
+                <h1>Contatos</h1>
+
+                <form>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome">
+                    <br>
+                    <label for="nome">Senha:</label>
+                    <input type="password" id="pass" name="pass">
+                    <br>
+                    <input type="checkbox" id="news" name="news">
+                    <label for="news">Deseja receber nossos emails de novidades?</label>
+                    <br>
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message"></textarea>
+                    <p>Qual sua bolsa preferida?</p>
+                    <input type="radio" id="NYSE" name="bolsa" value="NYSE"><label for="NYSE">NYSE</label><br>
+                    <input type="radio" id="Nasdaq" name="bolsa" value="Nasdaq"><label for="Nasdaq">Nasdaq</label><br>
+                    <input type="radio" id="B3" name="bolsa" value="B3"><label for="B3">B3</label><br>
+                    <input type="submit" value="Enviar">
+                </form>
+                
+            </main>
+        </div>
+
+        <footer id="footer">
+            <div id="footer-central">
+                <p style="color: white">Yúri Barbosa</p>
+            </div>
+        </footer>
+
+        
+    </body>
+
+</html>
